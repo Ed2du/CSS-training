@@ -1,0 +1,15 @@
+@use './abstract/mixin';
+@use './abstract/variaveis';
+@use './abstract/root';
+
+@use './components/header';
+
+@use './components/sliders';
+
+@use './components/cards';
+
+@use './components/desconto';
+
+@use './components/formulario';
+
+@use './components/footer';

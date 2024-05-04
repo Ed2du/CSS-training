@@ -1,0 +1,55 @@
+@use '../abstract/mixin';
+@use '../abstract/variaveis';
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mixin.margem(80%);
+
+    .form-content {
+        display: flex;
+        gap: 28px;  
+
+        .form-space {
+            padding: 2em 3em;
+            background: variaveis.$gradient-background;
+            border-radius: 40px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            gap: 24px;
+
+            .form-title {
+                @include mixin.font(31px ,variaveis.$font-krona, variaveis.$font-w, variaveis.$roxo-vibrante);
+            }
+
+            .form-paragraph {
+                @include mixin.font(variaveis.$font-p, variaveis.$font-Montserrat, variaveis.$font-w, variaveis.$preto)
+            }
+
+            .label-for-input {
+                @include mixin.font(18px, variaveis.$font-Montserrat, 600, variaveis.$preto);
+            }
+
+            .input {
+                border: none;
+                border-radius: 32px;
+                padding: 1.5em 1em;
+                opacity: 0.9;
+            }
+
+            .input-textarea {
+                height: 150px;
+            }
+
+            .submit-btn-form {
+                @include mixin.font(variaveis.$font-p, variaveis.$font-Montserrat, variaveis.$font-w, #FFF);
+                background: variaveis.$roxo-vibrante;
+                padding: 1em;
+                border: none;
+                border-radius: 40px;
+            }
+        }
+    }
+}

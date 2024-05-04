@@ -1,0 +1,38 @@
+@use '../abstract/mixin';
+@use '../abstract/variaveis';
+
+.cards {
+    margin: 5em 0 0 0;
+    background: variaveis.$gradient-background;
+    padding: 135px 85px;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+
+    .card-list {
+        @include mixin.margem(80%);
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+
+        .card {
+            background: variaveis.$card-background;
+            padding: 24px 16px;
+            border: 2px solid #FFF;
+            border-radius: 8px;
+            width: 350px;
+            transition: transform 0.4s ease;
+
+            &:hover {
+                transform: translateY(-10%);
+            }
+
+            .card-paragraph {
+                @include mixin.font(variaveis.$font-p, variaveis.$font-Montserrat, variaveis.$font-w, variaveis.$preto);
+                line-height: 33px;
+            }
+        }
+    }
+
+
+}

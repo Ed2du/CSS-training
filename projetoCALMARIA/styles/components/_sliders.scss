@@ -1,0 +1,49 @@
+@use '../abstract/mixin';
+@use '../abstract/variaveis';
+
+.sliders {
+    @include mixin.margem(80%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    .slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 102px;
+
+        .text-slide {
+            text-align: left;
+
+            .slide-title {
+                @include mixin.font(31px, variaveis.$font-krona, variaveis.$font-w, variaveis.$roxo-vibrante);
+            }
+
+            .slide-paragraph {
+                @include mixin.font(variaveis.$font-p, variaveis.$font-Montserrat, variaveis.$font-w, variaveis.$preto);
+                padding: 1.5em 0;
+            }
+
+            .vetor {
+                width: 100%;
+            }
+
+            .vetor-reverso {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    @media (max-width: 1025px) {
+        .sliders {
+            display: flex;
+            flex-direction: column;
+            
+            .slide {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

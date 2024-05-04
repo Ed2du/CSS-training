@@ -1,0 +1,8 @@
+@use '../abstract/mixin';
+@use '../abstract/variaveis';
+
+.footer {
+    padding: 1em 0;
+    background-color: variaveis.$verde-calmante;
+    @include mixin.font (1rem, variaveis.$font-Montserrat, variaveis.$font-w, variaveis.$preto);
+}
